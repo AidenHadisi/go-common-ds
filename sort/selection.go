@@ -6,7 +6,7 @@ func SelectionSort[T any](arr []T, comparator ComparatorFn[T]) {
 	for i := 0; i < n-1; i++ {
 		min := i
 		for j := i + 1; j < n; j++ {
-			if comparator(arr[j], arr[min]) < 0 {
+			if comparator(arr[min], arr[j]) > 0 {
 				min = j
 			}
 		}
